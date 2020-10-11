@@ -1,0 +1,34 @@
+{
+  "name": "meta-scrap",
+  "version": "1.0.0",
+  "description": "A Node utility for scrapping metadata from a website",
+  "main": "./dist/main.js",
+  "scripts": {
+    "tsc": "tsc --project ./tsconfig.json",
+    "compile": "npm run tsc",
+    "build": "npm run compile",
+    "start": "node ./dist/main.js",
+    "dev": "ts-node src/main.ts",
+    "watch": "tsc -w -p ./src -p ./tsconfig.json",
+    "debug": "cross-var node --inspect-brk=0.0.0.0:${DEBUG_PORT} --require source-map-support/register ./dist/main.js"
+  },
+  "author": "sacros",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/axios": "^0.14.0",
+    "@types/cheerio": "^0.22.22",
+    "@types/koa": "^2.11.4",
+    "@types/koa-bodyparser": "^4.3.0",
+    "@types/koa-router": "^7.4.1",
+    "cross-var": "^1.1.0",
+    "ts-node": "^9.0.0",
+    "typescript": "^4.0.3"
+  },
+  "dependencies": {
+    "axios": "^0.19.0",
+    "cheerio": "^1.0.0-rc.3",
+    "koa": "^2.13.0",
+    "koa-bodyparser": "^4.3.0",
+    "koa-router": "^9.4.0"
+  }
+}
